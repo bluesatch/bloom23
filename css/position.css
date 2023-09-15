@@ -1,0 +1,296 @@
+/* font-family: 'Butterfly Kids', cursive;
+font-family: 'Inter', sans-serif; */
+
+/* colors
+
+    primary #26292e 
+    secondary #e7718b
+    gradiant #ec8da1 -> secondary
+    2nd section background #f4f4f6
+    2nd section bottom border #fce3e7
+    3rd section background #ffffff
+    product border #bcc5d7
+    product background #444444
+*/
+
+
+
+:root {
+    --logoFont: 'Butterfly Kids', cursive;
+    --mainFont: 'Inter', sans-serif;
+    --prim: #26292e;
+    --sec: #e7718b;
+    --grad: radial-gradient(
+        at top center,
+        #ec8da1, var(--sec)
+    );
+
+}
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--mainFont);
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.inner {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* -----header----- */
+
+.header {
+    padding: 10px 0;
+    background-color: var(--prim);
+}
+
+.header .inner {
+    position: relative;
+    height: 60px;
+    /* border: 1px solid white; */
+}
+
+.logo, #topNav {
+    position: absolute;
+    margin: 0;
+    width: 50%;
+    /* border: 1px solid yellow; */
+}
+
+#topNav {
+    top: 20px;
+    right: 0;
+}
+
+.social-list {
+    margin: 0;
+    text-align: right;
+}
+
+.list-item {
+    display: inline;
+    padding-left: 8px;
+}
+
+.logo {
+    color: #f4f4f6;
+    font-family: var(--logoFont);
+    font-size: calc(14px + (48 - 14) * ((100vw - 300px) / (1600 - 300)));
+    text-transform: capitalize;
+}
+
+.nav-link {
+    color: #f4f4f6;
+}
+
+/* -----main----- */
+
+#section1 {
+    padding: 20px;
+    background-color: var(--sec);
+    background-image: var(--grad);
+}
+
+#section1 .inner {
+    position: relative;
+    height: 485px;
+    /* border: 1px solid green; */
+
+}
+
+#box1, #box2 {
+    position: absolute;
+    height: 450px;
+    /* border: 1px solid blue; */
+}
+
+#box1 {
+    top: 0;
+    left: 0;
+    width: 45%;
+    color: #f4f4f6;
+}
+
+.box-heading {
+    margin-top: 0;
+    font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.box1-text {
+    width: 90%;
+    font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-weight: 300;
+    /* border: 1px solid blue; */
+}
+
+.box-content {
+    position: relative;
+    height: 450px;
+    /* border: 1px solid red; */
+}
+
+.button-div {
+    position: absolute;
+    bottom: 0;
+}
+
+.btn {
+    margin-right: 20px;
+    padding: 8px 16px;
+    color: #f4f4f6;
+    text-transform: capitalize;
+    background-color: var(--prim);
+    border: none;
+    border-radius: 5px;
+}
+
+#box2 {
+    top: 0;
+    right: 0;
+    width: 50%;
+}
+
+.laptop-img {
+    width: 100%;
+    height: auto;
+}
+
+#section2 {
+    padding: 40px 0;
+    background-color: #f4f4f6;
+    border-bottom: 5px solid #fce3e7;
+}
+
+#section2 .inner {
+    position: relative;
+    height: 220px;
+    /* border: 1px solid green; */
+}
+
+.content {
+    position: absolute;
+    padding: 10px 5px;
+    width: calc(100% / 3);
+    /* border: 1px solid blue; */
+}
+
+#content2 {
+    left: calc(100% / 3);
+}
+
+#content3 {
+    right: 0;
+}
+
+.content-heading {
+    margin: 0;
+    color: var(--prim);
+}
+
+.content-text {
+    color: #bbb;
+}
+
+#section3 {
+    padding: 40px 0;
+}
+
+#section3 .inner {
+    position: relative;
+    height: 600px;
+    /* border: 1px solid green; */
+}
+
+.product-section {
+    position: absolute;
+    width: 66%;
+    /* border: 1px solid blue; */
+}
+
+.product-box {
+    position: relative;
+    width: 90%;
+    height: 440px;
+    /* border: 1px solid red; */
+}
+
+.product {
+    position: absolute;
+    width: 400px;
+    height: 200px; 
+    background-color: #444;
+    border: 10px solid #bcc5d7;
+    box-shadow: 0px 10px 10px #aaa;
+}
+
+.product:nth-child(2) {
+    right: 0;
+}
+
+.product:nth-child(3) {
+    bottom: 0;
+}
+
+.product:nth-child(4) {
+    right: 0;
+    bottom: 0;
+}
+
+
+.review-section {
+    position: absolute;
+    right: 0;
+    width: 33%;
+    /* border: 1px solid blue; */
+}
+
+.review-list {
+    padding: 10px 5px;
+}
+
+.review-item {
+    margin: 50px 0;
+    color: #bbb;
+}
+
+.bold {
+    color: var(--prim);
+}
+
+/* -----footer----- */
+
+.footer {
+    padding: 30px 0;
+    background-color: var(--prim);
+}
+
+#footer .inner {
+    position: relative;
+    height: 30px;
+}
+
+.colophon, #bottomNav {
+    position: absolute;
+    margin: 0;
+    width: 50%;
+    /* border: 1px solid white; */
+}
+
+#bottomNav {
+    right: 0;
+}
+
+
+
